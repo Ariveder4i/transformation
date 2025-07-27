@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private Vector3 _movementDirection;
 
     private void Update()
     {
-        transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+        transform.Translate(_movementDirection, Space.Self);
     }
 }
